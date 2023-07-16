@@ -1,9 +1,10 @@
 #include <stdio.h>
+
 /**
- * main - Entry point
- * Return: 0 (successful)
- * Description: prints all possible combinations
-*/
+ * main - print 0 to 9 with ,
+ *
+ *Return: Always 0 (success)
+ */
 
 int main(void)
 {
@@ -11,15 +12,13 @@ int main(void)
 
 	for (i = 0; i < 10; i++)
 	{
-		putchar (i + '0');
-		if (i != 9)
+		putchar((i % 10) + '0');
+		if (i < 9)
 		{
 			putchar(',');
 			putchar(' ');
 		}
-
 	}
 	putchar('\n');
-
 	return (0);
 }
