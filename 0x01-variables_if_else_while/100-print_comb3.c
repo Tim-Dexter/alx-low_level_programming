@@ -1,22 +1,26 @@
 #include <stdio.h>
-
 /**
- * main - print 0 to 9 with ,
- *
- *Return: Always 0 (success)
- */
+ * main - Entry point
+ * Return: 0 (successful)
+ * Description: double combination
+*/
 
 int main(void)
 {
-	int i;
+	int i, j;
 
-	for (i = 0; i < 10; i++)
+	for (i = 0; i < 9; i++)
 	{
-		putchar((i % 10) + '0');
-		if (i < 9)
+		for (j = i + 1; j < 10; j++)
 		{
-			putchar(',');
-			putchar(' ');
+			putchar (i + '0');
+			putchar (j + '0');
+
+			if (i != 8 || j != 9)
+			{
+				putchar(',');
+				putchar(' ');
+			}
 		}
 	}
 	putchar('\n');
